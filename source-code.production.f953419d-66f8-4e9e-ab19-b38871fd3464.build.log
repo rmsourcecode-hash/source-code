@@ -1,0 +1,88 @@
+2025-12-29T05:47:29.214Z	Initializing build environment...
+2025-12-29T05:47:30.938Z	Success: Finished initializing build environment
+2025-12-29T05:47:31.339Z	Cloning repository...
+2025-12-29T05:47:32.607Z	Restoring from dependencies cache
+2025-12-29T05:47:32.608Z	Restoring from build output cache
+2025-12-29T05:47:32.612Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2025-12-29T05:47:32.926Z	Installing project dependencies: npm clean-install --progress=false
+2025-12-29T05:47:43.563Z	
+2025-12-29T05:47:43.564Z	added 366 packages, and audited 367 packages in 10s
+2025-12-29T05:47:43.564Z	
+2025-12-29T05:47:43.565Z	145 packages are looking for funding
+2025-12-29T05:47:43.565Z	  run `npm fund` for details
+2025-12-29T05:47:43.565Z	
+2025-12-29T05:47:43.565Z	found 0 vulnerabilities
+2025-12-29T05:47:43.799Z	Executing user build command: npm run build
+2025-12-29T05:47:44.020Z	
+2025-12-29T05:47:44.021Z	> source_code_website_antigravity@0.1.0 build
+2025-12-29T05:47:44.021Z	> next build
+2025-12-29T05:47:44.021Z	
+2025-12-29T05:47:46.906Z	⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+2025-12-29T05:47:46.912Z	Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2025-12-29T05:47:46.912Z	This information is used to shape Next.js' roadmap and prioritize features.
+2025-12-29T05:47:46.912Z	You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2025-12-29T05:47:46.912Z	https://nextjs.org/telemetry
+2025-12-29T05:47:46.912Z	
+2025-12-29T05:47:46.924Z	▲ Next.js 16.1.1 (Turbopack)
+2025-12-29T05:47:46.925Z	
+2025-12-29T05:47:47.002Z	  Creating an optimized production build ...
+2025-12-29T05:48:06.577Z	✓ Compiled successfully in 19.0s
+2025-12-29T05:48:06.616Z	  Running TypeScript ...
+2025-12-29T05:48:10.186Z	  Collecting page data using 1 worker ...
+2025-12-29T05:48:10.609Z	  Generating static pages using 1 worker (0/4) ...
+2025-12-29T05:48:10.775Z	  Generating static pages using 1 worker (1/4) 
+2025-12-29T05:48:10.780Z	  Generating static pages using 1 worker (2/4) 
+2025-12-29T05:48:10.781Z	  Generating static pages using 1 worker (3/4) 
+2025-12-29T05:48:10.781Z	✓ Generating static pages using 1 worker (4/4) in 172.7ms
+2025-12-29T05:48:10.790Z	  Finalizing page optimization ...
+2025-12-29T05:48:10.798Z	
+2025-12-29T05:48:10.800Z	Route (app)
+2025-12-29T05:48:10.800Z	┌ ○ /
+2025-12-29T05:48:10.800Z	└ ○ /_not-found
+2025-12-29T05:48:10.800Z	
+2025-12-29T05:48:10.800Z	
+2025-12-29T05:48:10.800Z	○  (Static)  prerendered as static content
+2025-12-29T05:48:10.800Z	
+2025-12-29T05:48:10.917Z	Success: Build command completed
+2025-12-29T05:48:11.090Z	Executing user deploy command: npx wrangler deploy
+2025-12-29T05:48:12.398Z	npm warn exec The following package was not found and will be installed: wrangler@4.54.0
+2025-12-29T05:48:32.423Z	
+2025-12-29T05:48:32.423Z	 ⛅️ wrangler 4.54.0
+2025-12-29T05:48:32.423Z	───────────────────
+2025-12-29T05:48:32.440Z	
+2025-12-29T05:48:32.504Z	✘ [ERROR] Missing entry-point to Worker script or to assets directory
+2025-12-29T05:48:32.504Z	
+2025-12-29T05:48:32.504Z	  
+2025-12-29T05:48:32.505Z	  If there is code to deploy, you can either:
+2025-12-29T05:48:32.505Z	  - Specify an entry-point to your Worker script via the command line (ex: `npx wrangler deploy src/index.ts`)
+2025-12-29T05:48:32.505Z	  - Or create a "wrangler.jsonc" file containing:
+2025-12-29T05:48:32.505Z	  
+2025-12-29T05:48:32.505Z	  ```
+2025-12-29T05:48:32.505Z	  {
+2025-12-29T05:48:32.505Z	    "name": "worker-name",
+2025-12-29T05:48:32.505Z	    "compatibility_date": "2025-12-29",
+2025-12-29T05:48:32.506Z	    "main": "src/index.ts"
+2025-12-29T05:48:32.506Z	  }
+2025-12-29T05:48:32.506Z	  ```
+2025-12-29T05:48:32.506Z	  
+2025-12-29T05:48:32.506Z	  
+2025-12-29T05:48:32.506Z	  If are uploading a directory of assets, you can either:
+2025-12-29T05:48:32.506Z	  - Specify the path to the directory of assets via the command line: (ex: `npx wrangler deploy --assets=./dist`)
+2025-12-29T05:48:32.509Z	  - Or create a "wrangler.jsonc" file containing:
+2025-12-29T05:48:32.509Z	  
+2025-12-29T05:48:32.509Z	  ```
+2025-12-29T05:48:32.509Z	  {
+2025-12-29T05:48:32.509Z	    "name": "worker-name",
+2025-12-29T05:48:32.510Z	    "compatibility_date": "2025-12-29",
+2025-12-29T05:48:32.510Z	    "assets": {
+2025-12-29T05:48:32.510Z	      "directory": "./dist"
+2025-12-29T05:48:32.511Z	    }
+2025-12-29T05:48:32.511Z	  }
+2025-12-29T05:48:32.512Z	  ```
+2025-12-29T05:48:32.512Z	  
+2025-12-29T05:48:32.512Z	
+2025-12-29T05:48:32.512Z	
+2025-12-29T05:48:32.526Z	
+2025-12-29T05:48:32.526Z	Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+2025-12-29T05:48:32.544Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2025-12-29_05-48-31_888.log"
+2025-12-29T05:48:32.669Z	Failed: error occurred while running deploy command
