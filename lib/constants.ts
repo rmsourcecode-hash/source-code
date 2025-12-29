@@ -1,9 +1,11 @@
 // WhatsApp Configuration
-// Replace XXXXXXXXXX with your actual WhatsApp number (without +)
-export const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+export const WHATSAPP_NUMBER = "919901911121";
 
-// Instagram placeholder - replace with actual URL
-export const INSTAGRAM_URL = "https://instagram.com/sourcecode";
+// Instagram URL
+export const INSTAGRAM_URL = "https://instagram.com/source_code_nutrition";
+
+// Default greeting message
+export const DEFAULT_GREETING = "Hey, What's up!";
 
 // Generate WhatsApp link with prefilled message
 export const getWhatsAppLink = (message: string): string => {

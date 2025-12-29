@@ -1,6 +1,7 @@
 "use client";
 
-import { getWhatsAppLink, INSTAGRAM_URL } from "@/lib/constants";
+import { getWhatsAppLink, INSTAGRAM_URL, DEFAULT_GREETING } from "@/lib/constants";
+
 
 export function Footer() {
     return (
@@ -20,7 +21,7 @@ export function Footer() {
                         <h4 className="font-semibold mb-4">Connect</h4>
                         <div className="space-y-2">
                             <a
-                                href={getWhatsAppLink("Hi! I have a question about Source Code.")}
+                                href={getWhatsAppLink(DEFAULT_GREETING)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-sm opacity-70 hover:opacity-100 transition-opacity
@@ -31,9 +32,8 @@ export function Footer() {
                                 </svg>
                                 WhatsApp
                             </a>
-                            {/* Replace with actual Instagram URL */}
                             <a
-                                href={INSTAGRAM_URL}
+                                href={`https://ig.me/m/source_code_nutrition`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-sm opacity-70 hover:opacity-100 transition-opacity
