@@ -2,7 +2,6 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { WhyHabitMatters } from "@/components/WhyHabitMatters";
 import { HowItWorks } from "@/components/HowItWorks";
-import { ForEveryAge } from "@/components/ForEveryAge";
 import { IngredientGrid } from "@/components/IngredientGrid";
 import { ProductSection } from "@/components/ProductSection";
 import { BrandStory } from "@/components/BrandStory";
@@ -14,7 +13,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        {/* 1. Hero Section */}
+        {/* 1. Hero - Calm, aspirational */}
         <Hero />
 
         {/* 2. Why This Habit Matters */}
@@ -23,19 +22,16 @@ export default function Home() {
         {/* 3. A Simple Daily Ritual */}
         <HowItWorks />
 
-        {/* 4. For Every Age. For Every Home. */}
-        <ForEveryAge />
-
-        {/* 5. What's Inside (Grouped by Benefits) */}
+        {/* 4. What's Inside - Benefit-led */}
         <IngredientGrid />
 
-        {/* 6. Choose Your Commitment */}
+        {/* 5. Choose Your Commitment */}
         <ProductSection />
 
-        {/* 7. Why Source Code Nutrition */}
+        {/* 6. Why We Exist - Belief-led story */}
         <BrandStory />
 
-        {/* 8. FAQ */}
+        {/* 7. FAQ */}
         <FAQ />
       </main>
       <Footer />

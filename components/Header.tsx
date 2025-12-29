@@ -1,48 +1,39 @@
-"use client";
-
 import Image from "next/image";
 import { getWhatsAppLink, getOrderMessage } from "@/lib/constants";
 
 const navLinks = [
-    { label: "Daily Ritual", href: "#how-it-works" },
-    { label: "Ingredients", href: "#ingredients" },
+    { label: "Ritual", href: "#how-it-works" },
+    { label: "Inside", href: "#ingredients" },
     { label: "Order", href: "#product" },
     { label: "FAQ", href: "#faq" },
 ];
 
 export function Header() {
-    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
     return (
-        <header className="header-sticky fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16 md:h-20">
+        <header className="header-sticky fixed top-0 left-0 right-0 z-50 border-b">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-14 md:h-16">
                     {/* Logo */}
-                    <a href="#" className="flex items-center group" aria-label="Source Code Home">
+                    <a href="#" className="flex items-center gap-2" aria-label="Source Code Nutrition Home">
                         <Image
                             src="/source_code_logo.png"
-                            alt="Source Code Logo"
-                            width={52}
-                            height={52}
-                            className="rounded-xl transition-transform group-hover:scale-105"
+                            alt="Source Code Nutrition Logo"
+                            width={40}
+                            height={40}
+                            className="rounded-lg"
                         />
+                        <span className="hidden sm:inline font-semibold text-deep-green text-sm">
+                            Source Code
+                        </span>
                     </a>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+                    <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
                         {navLinks.map((link) => (
                             <a
                                 key={link.href}
                                 href={link.href}
-                                onClick={(e) => handleSmoothScroll(e, link.href)}
-                                className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity
-                         focus:outline-none focus:ring-2 focus:ring-leaf-green focus:ring-offset-2 rounded-sm px-1"
+                                className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
                             >
                                 {link.label}
                             </a>
@@ -54,10 +45,10 @@ export function Header() {
                         href={getWhatsAppLink(getOrderMessage())}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-primary text-sm md:text-base px-5 md:px-6 py-2.5 md:py-3 rounded-full font-medium
-                     focus:outline-none focus:ring-2 focus:ring-leaf-green focus:ring-offset-2"
+                        className="btn-primary text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium"
                     >
-                        Order on WhatsApp
+                        <span className="hidden sm:inline">Start on WhatsApp</span>
+                        <span className="sm:hidden">Order</span>
                     </a>
                 </div>
             </div>
