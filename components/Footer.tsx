@@ -1,22 +1,28 @@
 "use client";
 
-import { getWhatsAppLink, INSTAGRAM_URL, DEFAULT_GREETING } from "@/lib/constants";
-
+import { getWhatsAppLink, DEFAULT_GREETING } from "@/lib/constants";
 
 export function Footer() {
     return (
         <footer className="footer-section py-12 border-t" aria-label="Site footer">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Tagline above footer content */}
+                <div className="text-center mb-8 pb-8 border-b border-current/10">
+                    <p className="text-lg font-medium text-deep-green italic">
+                        Crafted in small batches • Designed for daily use
+                    </p>
+                </div>
+
                 <div className="grid md:grid-cols-3 gap-8 mb-8">
                     {/* Brand */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4">Source Code</h3>
+                        <h3 className="text-xl font-bold mb-4">Source Code Nutrition</h3>
                         <p className="opacity-70 text-sm leading-relaxed">
-                            Pre-portioned nutrition for mindful mornings.
+                            Building habits. Building health. Building a nation.
                         </p>
                     </div>
 
-                    {/* Links */}
+                    {/* Connect */}
                     <div>
                         <h4 className="font-semibold mb-4">Connect</h4>
                         <div className="space-y-2">
@@ -33,7 +39,7 @@ export function Footer() {
                                 WhatsApp
                             </a>
                             <a
-                                href={`https://ig.me/m/source_code_nutrition`}
+                                href="https://ig.me/m/source_code_nutrition"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-sm opacity-70 hover:opacity-100 transition-opacity
@@ -51,7 +57,6 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold mb-4">Legal</h4>
                         <p className="text-xs opacity-60 mb-2">
-                            {/* Replace with actual FSSAI license number */}
                             FSSAI: Applied (License no: pending)
                         </p>
                     </div>
@@ -60,12 +65,12 @@ export function Footer() {
                 {/* Disclaimer */}
                 <div className="pt-8 border-t border-current/10">
                     <p className="text-xs opacity-50 text-center max-w-2xl mx-auto">
-                        Disclaimer: Source Code products are food supplements. Not a medicine.
-                        Not intended to diagnose, treat, cure, or prevent any disease.
-                        Consult your healthcare provider before making dietary changes.
+                        This product is a food supplement, not a medicine. Not intended to diagnose,
+                        treat, cure, or prevent any disease. Consult your healthcare provider before
+                        making dietary changes.
                     </p>
                     <p className="text-xs opacity-50 text-center mt-4">
-                        © {new Date().getFullYear()} Source Code. All rights reserved.
+                        © {new Date().getFullYear()} Source Code Nutrition. All rights reserved.
                     </p>
                 </div>
             </div>

@@ -4,9 +4,9 @@ import Image from "next/image";
 import { getWhatsAppLink, getOrderMessage } from "@/lib/constants";
 
 const navLinks = [
-    { label: "How it works", href: "#how-it-works" },
-    { label: "What's inside", href: "#ingredients" },
-    { label: "Pricing", href: "#product" },
+    { label: "Daily Ritual", href: "#how-it-works" },
+    { label: "Ingredients", href: "#ingredients" },
+    { label: "Order", href: "#product" },
     { label: "FAQ", href: "#faq" },
 ];
 
