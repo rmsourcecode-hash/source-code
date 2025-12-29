@@ -13,13 +13,12 @@ export const getWhatsAppLink = (message: string): string => {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 };
 
-// Default order message
-export const getOrderMessage = (pack: string = "7-Day Trial Box"): string => {
-  return `Hi! I want to order Source Code: Vital (${pack}). Name: __. Pincode: __.`;
+// Default order message - updated format
+export const getOrderMessage = (): string => {
+  return `Hi, I want to order Source Code: Vital (7-Day Pack – ₹549).
+My name is __.
+Delivery pincode is __.`;
 };
 
-// Price placeholders - replace with actual prices
-export const PRICES = {
-  trial7Day: "₹___",
-  pack14Day: "₹___",
-};
+// Price - Only 7-day pack now
+export const PRICE = "₹549";

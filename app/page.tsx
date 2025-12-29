@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { WhyHabitMatters } from "@/components/WhyHabitMatters";
 import { HowItWorks } from "@/components/HowItWorks";
+import { PriceComparison } from "@/components/PriceComparison";
 import { IngredientGrid } from "@/components/IngredientGrid";
 import { ProductSection } from "@/components/ProductSection";
 import { BrandStory } from "@/components/BrandStory";
@@ -13,7 +14,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        {/* 1. Hero - Calm, aspirational */}
+        {/* 1. Hero */}
         <Hero />
 
         {/* 2. Why This Habit Matters */}
@@ -22,16 +23,19 @@ export default function Home() {
         {/* 3. A Simple Daily Ritual */}
         <HowItWorks />
 
-        {/* 4. What's Inside - Benefit-led */}
+        {/* 4. ₹549 vs ₹549 Comparison - KEY SECTION */}
+        <PriceComparison />
+
+        {/* 5. What's Inside */}
         <IngredientGrid />
 
-        {/* 5. Choose Your Commitment */}
+        {/* 6. Order - Single Product */}
         <ProductSection />
 
-        {/* 6. Why We Exist - Belief-led story */}
+        {/* 7. Why We Exist */}
         <BrandStory />
 
-        {/* 7. FAQ */}
+        {/* 8. FAQ */}
         <FAQ />
       </main>
       <Footer />

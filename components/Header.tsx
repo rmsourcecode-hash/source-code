@@ -3,7 +3,7 @@ import { getWhatsAppLink, getOrderMessage } from "@/lib/constants";
 
 const navLinks = [
     { label: "Ritual", href: "#how-it-works" },
-    { label: "Inside", href: "#ingredients" },
+    { label: "Compare", href: "#comparison" },
     { label: "Order", href: "#product" },
     { label: "FAQ", href: "#faq" },
 ];
@@ -47,7 +47,7 @@ export function Header() {
                         rel="noopener noreferrer"
                         className="btn-primary text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium"
                     >
-                        <span className="hidden sm:inline">Start on WhatsApp</span>
+                        <span className="hidden sm:inline">Order ₹549</span>
                         <span className="sm:hidden">Order</span>
                     </a>
                 </div>

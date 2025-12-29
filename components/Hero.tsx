@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getWhatsAppLink, getOrderMessage } from "@/lib/constants";
+import { getWhatsAppLink, getOrderMessage, PRICE } from "@/lib/constants";
 
 export function Hero() {
     return (
@@ -16,7 +16,7 @@ export function Hero() {
             {/* Hero content */}
             <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                    {/* Text content - appears first on mobile */}
+                    {/* Text content */}
                     <div className="text-center lg:text-left order-2 lg:order-1">
                         <h1
                             id="hero-heading"
@@ -30,12 +30,13 @@ export function Hero() {
                             Premium soaked nuts & seeds — designed for every age, every home.
                         </p>
 
-                        {/* Philosophy line - visible */}
+                        {/* Philosophy line */}
                         <p className="text-sm sm:text-base text-deep-green font-medium mb-6 md:mb-8 italic">
                             "Building habits. Building health. Building a nation."
                         </p>
 
-                        <div className="flex justify-center lg:justify-start">
+                        {/* CTA with price */}
+                        <div className="flex flex-col items-center lg:items-start gap-3">
                             <a
                                 href={getWhatsAppLink(getOrderMessage())}
                                 target="_blank"
@@ -43,24 +44,26 @@ export function Hero() {
                                 className="btn-primary px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold text-center
                          focus:outline-none focus:ring-2 focus:ring-leaf-green focus:ring-offset-2"
                             >
-                                Start the habit on WhatsApp
+                                Start the habit — {PRICE}
                             </a>
+                            <p className="text-xs opacity-50">
+                                Order before Wednesday for this week's dispatch
+                            </p>
                         </div>
                     </div>
 
-                    {/* Hero image - calm, aspirational lifestyle */}
+                    {/* Hero image */}
                     <div className="relative order-1 lg:order-2">
                         <div className="hero-image-container aspect-square max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
                             <Image
                                 src="/hero_image.png"
-                                alt="Fresh soaked nuts and seeds in a ceramic bowl - morning nutrition ritual"
+                                alt="Fresh soaked nuts and seeds - morning nutrition ritual"
                                 fill
                                 className="object-cover"
                                 priority
                                 sizes="(max-width: 640px) 320px, (max-width: 768px) 384px, (max-width: 1024px) 448px, 512px"
                             />
                         </div>
-                        {/* Decorative elements */}
                         <div className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 w-full h-full rounded-2xl md:rounded-3xl bg-leaf-green/10 -z-10" />
                     </div>
                 </div>
